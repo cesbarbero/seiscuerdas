@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.index_grid {
+    background-color: rgb(212, 212, 212);
+    display: grid;
+    grid-template-columns: 500px auto;
+    grid-template-rows: 100px 500px 100px;
+    grid-template-areas:
+        "logo menu"
+        "img-background img-background"
+        "foot foot";
+    gap: 10px;
+}
+
+/*body {
+    background-color: rgb(212, 212, 212);
+
+}
+header {
+    background-color:rgb(161, 161, 161);
+    position: sticky;
+    top: 0px;
+    border-bottom: black;
+    border: solid;
+    width: 100%;
+}*/
+.logo {
+    background-color: rgb(161, 161, 161);
+    display: block;
+    width: 60%;
+    padding: 5px;
+    /*float: left;*/
+}
+.logo-img {
+    width: 105px;
+    display: inline-block;
+    padding-left: 25px;
+    position: absolute;
+    top: 27px;
+    left: 850px;
+}
+.logo a h2{
+    text-align: left;
+    text-decoration: none;
+    padding-left: 45px;
+    font-size: 70px;
+    color:white;
+    font-weight: 100;
+    display:inline-block;
+    font-family: 'Monoton', cursive;
+}
+h3{
+    text-align: right;
+    padding: 0px 20px;
+    width: 60%;
+    font-family: 'Great Vibes', cursive;
+    font-size: 200%;
+}
+.menu {
+    background-color:rgb(161, 161, 161);
+    width: 700px;
+    display: inline-block;
+    padding: 65px 0px;
+}
+.menu nav ul {
+    width: 100%;
+    position: right;
+}
+.menu nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 15px;
+}
+.menu nav ul li a{
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Alice', serif;
+    font-size: 160%;
+    color: white;
+}
+/*.main {
+    width: 100%;
+    height: 800px;
+}
+.img-background {
+    height: 800px;
+    background-image: url(../media/feel2.jpg);
+    background-size: cover;
+    background-size: 120rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.txt-ppal {
+    position: absolute;
+    top: 650px;
+    right: 70px;
+    left: 1300px;
+    font-family: 'Alice', serif;
+    font-size: 130%;
+}*/
+h4{
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    font-family: 'Alice', serif;
+    font-size: 250%;
+}
+.foot {
+    background-color: rgb(161, 161, 161);
+    border: solid;
+    border-color: black;
+    position:relative;
+    height:110px;
+    width: 100%;
+}
+p{
+    font-family: 'Alice', serif;
+    font-size: 130%;
+    margin-left: 20px;
+    text-align: justify;  
+}
+.about {
+    width: 55%;
+    float: left;
+    padding: 20px;
+}
+.iconSize {
+    height: 60px;
+    width: 60px;
+    padding: 25px 40px;
+}
+.icons{
+    display: inline-block;
+    width: 25%;
+    position: absolute;
+    padding-left: 270px;
+}
