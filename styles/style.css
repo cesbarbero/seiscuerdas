@@ -3,48 +3,38 @@
     padding: 0;
 }
 .index_grid {
-    background-color: rgb(212, 212, 212);
     display: grid;
-    grid-template-columns: 500px auto;
-    grid-template-rows: 100px 500px 100px;
+    grid-template-columns: 40% auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
-        "logo menu"
-        "img-background img-background"
-        "foot foot";
-    gap: 10px;
-}
-
-/*body {
-    background-color: rgb(212, 212, 212);
-
+        "header header header"
+        "main main main"
+        "footer footer footer";
 }
 header {
-    background-color:rgb(161, 161, 161);
+    background-color: rgb(161, 161, 161);
+    grid-area: header;
+    display: flex;
     position: sticky;
     top: 0px;
-    border-bottom: black;
+    border-color: black;
     border: solid;
-    width: 100%;
-}*/
+}
 .logo {
     background-color: rgb(161, 161, 161);
-    display: block;
-    width: 60%;
-    padding: 5px;
-    /*float: left;*/
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .logo-img {
     width: 105px;
-    display: inline-block;
-    padding-left: 25px;
-    position: absolute;
-    top: 27px;
-    left: 850px;
+    padding-top: 20px;   
 }
 .logo a h2{
     text-align: left;
     text-decoration: none;
-    padding-left: 45px;
+    padding-left: 30px;
     font-size: 70px;
     color:white;
     font-weight: 100;
@@ -52,88 +42,427 @@ header {
     font-family: 'Monoton', cursive;
 }
 h3{
-    text-align: right;
-    padding: 0px 20px;
-    width: 60%;
+    padding-left: 280px;
     font-family: 'Great Vibes', cursive;
     font-size: 200%;
 }
 .menu {
     background-color:rgb(161, 161, 161);
-    width: 700px;
-    display: inline-block;
-    padding: 65px 0px;
-}
-.menu nav ul {
-    width: 100%;
-    position: right;
+    width: 55%;
+    display: flex;
+    justify-content:space-around;
 }
 .menu nav ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 0px 15px;
+    padding: 60px 20px;
 }
 .menu nav ul li a{
     text-decoration: none;
-    display: inline-block;
     font-family: 'Alice', serif;
     font-size: 160%;
     color: white;
-}
-/*.main {
-    width: 100%;
-    height: 800px;
 }
 .img-background {
     height: 800px;
     background-image: url(../media/feel2.jpg);
     background-size: cover;
-    background-size: 120rem;
     background-repeat: no-repeat;
-    background-position: center center;
 }
-.txt-ppal {
+main {
+    grid-area: main;
+}
+.main_contacto {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(212, 212, 212);
+}
+h4{
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-family: 'Alice', serif;
+    font-size: 250%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    border: solid;
+}
+label {
+    font-family: 'Alice', serif;
+    font-size: 35px;
+    padding: 15px;
+    text-align: left;
+}
+input {
+    font-family: 'Alice', serif;
+    font-size: 20px;
+    padding: 5px;
+    width: 70%;
+}
+fieldset {
+    width: 70%;
+    padding: 15px;
+}
+fieldset legend{
+    font-family: 'Alice', serif;
+    font-size: 35px;
+    padding: 15px;
+}
+.check {
+    width: 100px;
+}
+h6 {
+    font-family: 'Alice', serif;
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px;
+}
+textarea {
+    width: 70%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.butt {
+    width: 20%;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+h5{
     position: absolute;
     top: 650px;
     right: 70px;
     left: 1300px;
     font-family: 'Alice', serif;
     font-size: 130%;
-}*/
-h4{
-    text-align: center;
-    padding: 5px;
-    width: 100%;
-    font-family: 'Alice', serif;
-    font-size: 250%;
 }
-.foot {
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
     background-color: rgb(161, 161, 161);
     border: solid;
     border-color: black;
-    position:relative;
-    height:110px;
-    width: 100%;
 }
 p{
     font-family: 'Alice', serif;
     font-size: 130%;
-    margin-left: 20px;
     text-align: justify;  
 }
 .about {
     width: 55%;
-    float: left;
     padding: 20px;
 }
 .iconSize {
     height: 60px;
     width: 60px;
-    padding: 25px 40px;
 }
 .icons{
-    display: inline-block;
+    display: flex;
+    justify-content: space-around;
     width: 25%;
-    position: absolute;
-    padding-left: 270px;
+    padding: 25px;
+}
+@media screen and (max-width:768px){
+    header {
+        background-color: rgb(161, 161, 161);
+        grid-area: header;
+        display: flex;
+        position: sticky;
+        top: 0px;
+        border-color: black;
+        border: solid;
+        flex-wrap: wrap;
+        z-index: 200;
+    }
+    .logo {
+        background-color: rgb(161, 161, 161);
+        width: 70%;
+        display: flex;
+    }
+    .logo-img {
+        width: 50px;
+        padding-left: 5px;
+    }
+    .logo a h2{
+        text-decoration: none;
+        padding-left: 120px;
+        padding-top: 5px;
+        font-size: 52px;
+        color:white;
+        font-weight: 100;
+        font-family: 'Monoton', cursive;
+    }
+    h3{
+        padding-left: 250px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 150%;
+    }
+    header a {
+        display: inline-block;
+    }
+    .menu {
+        background-color:rgb(161, 161, 161);
+        width: 100%;
+        display: flex;
+    }
+    .menu nav ul li{
+        display: flex;
+        list-style-type: none;
+        padding: 5px 5px;
+        flex-direction: column;
+    }
+    .menu nav ul li a{
+        text-decoration: none;
+        font-family: 'Alice', serif;
+        font-size: 130%;
+        color: white;
+    }
+    .img-background {
+        height: 800px;
+        background-image: url(../media/feel2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .main_contacto {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(212, 212, 212);
+    }
+    h4{
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        font-family: 'Alice', serif;
+        font-size: 180%;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        border: solid;
+    }
+    label {
+        font-family: 'Alice', serif;
+        font-size: 28px;
+        padding: 15px;
+        text-align: left;
+    }
+    input {
+        font-family: 'Alice', serif;
+        font-size: 15px;
+        padding: 5px;
+        width: 85%;
+    }
+    fieldset {
+        width: 85%;
+        padding: 15px;
+    }
+    fieldset legend{
+        font-family: 'Alice', serif;
+        font-size: 28px;
+        padding: 15px;
+    }
+    .check {
+        width: 40px;
+    }
+    h6 {
+        font-family: 'Alice', serif;
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px;
+    }
+    textarea {
+        width: 85%;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .butt {
+        width: 40%;
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+    h5{
+        position: absolute;
+        top: 900px;
+        right: 10px;
+        left: 20px;
+        font-family: 'Alice', serif;
+        font-size: 110%;
+        color: white;
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(161, 161, 161);
+        border: solid;
+        border-color: black;
+    }
+    p{
+        font-family: 'Alice', serif;
+        font-size: 100%;
+        text-align: justify;  
+    }
+    .about {
+        width: 98%;
+        padding: 5px
+    }
+    .iconSize {
+        height: 60px;
+        width: 60px;
+        padding-top: 5px;
+    }
+    .icons{
+        display: flex;
+        justify-content: space-around;
+        width: 98%;
+        padding: 5px;
+    }
+}
+@media screen and (max-width:480px){
+    .index_grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    header {
+        background-color: rgb(161, 161, 161);
+        grid-area: header;
+        display: flex;
+        position: sticky;
+        top: 0px;
+        border-color: black;
+        border: solid;
+        flex-wrap: wrap;
+        z-index: 200;
+    }
+    .logo {
+        background-color: rgb(161, 161, 161);
+        width: 80%;
+        display: flex;
+    }
+    .logo-img {
+        width: 50px;
+        padding-left: 15px;
+    }
+    .logo a h2{
+        text-align: left;
+        text-decoration: none;
+        padding-left: 12px;
+        padding-top: 5px;
+        font-size: 47px;
+        color:white;
+        font-weight: 100;
+        font-family: 'Monoton', cursive;
+    }
+    h3{
+        padding-left: 100px;
+        font-family: 'Great Vibes', cursive;
+        font-size: 150%;
+    }
+    header a {
+        display: inline-block;
+    }
+    .menu {
+        background-color:rgb(161, 161, 161);
+        width: 100%;
+        display: flex;
+    }
+    .menu nav ul li{
+        display: flex;
+        list-style-type: none;
+        padding: 5px 5px;
+        flex-direction: column;
+    }
+    .menu nav ul li a{
+        text-decoration: none;
+        font-family: 'Alice', serif;
+        font-size: 130%;
+        color: white;
+    }
+    .img-background {
+        height: 800px;
+        background-image: url(../media/feel2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    fieldset {
+        width: 85%;
+        padding: 10px;
+    }
+    fieldset legend{
+        font-family: 'Alice', serif;
+        font-size: 23px;
+        padding: 15px;
+    }
+    .check {
+        width: 20%;
+    }
+    h6 {
+        font-family: 'Alice', serif;
+        font-size: 20px;
+        display: inline-block;
+        padding: 5px;
+        width: 75%;
+    }
+    textarea {
+        width: 85%;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    .butt {
+        width: 40%;
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+    h5{
+        position: absolute;
+        top: 850px;
+        right: 10px;
+        left: 20px;
+        font-family: 'Alice', serif;
+        font-size: 110%;
+        color: white;
+    }
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(161, 161, 161);
+        border: solid;
+        border-color: black;
+    }
+    p{
+        font-family: 'Alice', serif;
+        font-size: 100%;
+        text-align: justify;  
+    }
+    .about {
+        width: 98%;
+        padding: 5px
+    }
+    .iconSize {
+        height: 60px;
+        width: 60px;
+        padding-top: 5px;
+    }
+    .icons{
+        display: flex;
+        justify-content: space-around;
+        width: 98%;
+        padding: 5px;
+    }
 }
