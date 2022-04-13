@@ -2,42 +2,30 @@
     margin: 0;
     padding: 0;
 }
-.index_grid {
-    display: grid;
-    grid-template-columns: 40% auto auto;
-    grid-template-rows: 152px auto 115px;
-    grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-}
 header {
     background-image: linear-gradient(grey, rgb(161, 161, 161), white);
-    grid-area: header;
+    height: 140px;
+    top: 0;
     display: flex;
     position: sticky;
-    top: 0px;
+    align-items: center;
     border-color: black;
     border: solid;
 }
 .logo {
     background-image: linear-gradient(grey, rgb(161, 161, 161), white);
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: 5%;
+    border-radius: 15px;
 }
 @keyframes girar {
     0% {transform: rotate(359deg)};
-    25% {transform: rotate(359deg)};
-    50% {transform: rotate(359deg)};
-    75% {transform: rotate(359deg)};
-    100% {transform: rotate(359deg)};
 }
 .logo-img {
     width: 105px;
-    /*padding-top: 25px;*/
-    margin-top: 23px;
     animation-name: girar;
     animation-delay: 3s;
     animation-duration: 0.6s;
@@ -53,22 +41,31 @@ header {
     font-weight: 100;
     display:inline-block;
     font-family: 'Monoton', cursive;
+    margin-bottom: 0rem;
 }
 h3{
     padding-left: 330px;
     font-family: 'Great Vibes', cursive;
     font-size: 200%;
+    margin-bottom: 0rem;
 }
 .menu {
     background-image: linear-gradient(grey, rgb(161, 161, 161), white);
-    width: 50%;
+    width: 45%;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
+    margin-left: 5%;
+    margin-right: 1%;
+    border-radius: 15px;
+}
+.menu nav ul {
+    margin-bottom: 0;
+    padding-left: 0;
 }
 .menu nav ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 60px 20px;
+    padding: 20px 20px;
 }
 .menu nav ul li a{
     text-decoration: none;
@@ -78,7 +75,7 @@ h3{
 }
 .menu nav ul li a:hover {
     color: white;
-    font-size: 180%;
+    font-size: 165%;
 }
 .img-background {
     height: 850px;
@@ -87,7 +84,7 @@ h3{
     background-repeat: no-repeat;
 }
 main {
-    grid-area: main;
+    background-image: radial-gradient(grey, white);
 }
 .main_contacto {
     grid-area: main;
@@ -98,10 +95,11 @@ main {
 }
 h4{
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     font-family: 'Alice', serif;
     font-size: 250%;
+    margin-bottom: 0;
 }
 form{
     display: flex;
@@ -113,7 +111,7 @@ form{
 }
 label {
     font-family: 'Alice', serif;
-    font-size: 35px;
+    font-size: 30px;
     padding: 15px;
     text-align: left;
 }
@@ -128,15 +126,16 @@ input:focus {
 }
 fieldset {
     width: 70%;
-    padding: 15px;
+    margin: 15px;
+    border: solid;
 }
 fieldset legend{
     font-family: 'Alice', serif;
-    font-size: 35px;
+    font-size: 30px;
     padding: 15px;
 }
 .check {
-    width: 100px;
+    width: 70px;
 }
 h6 {
     font-family: 'Alice', serif;
@@ -176,11 +175,29 @@ footer {
 p{
     font-family: 'Alice', serif;
     font-size: 130%;
-    text-align: justify;  
+    text-align: justify;
+    margin-bottom: 0;
+    padding: 10px;
+}
+.ul_chords li{
+    font-family: 'Alice', serif;
+    font-size: 120%;
+    text-align: justify;
+    padding: 3px;
+}
+.chords {
+    display: flex;
+    height: auto;
+    border: solid;
+    margin-bottom: 2px;
+}
+.def_chord p{
+    width: 50%;
+    font-size: 50%;
 }
 .about {
     width: 55%;
-    padding: 20px;
+    padding: 10px;
 }
 .iconSize {
     height: 60px;
@@ -195,36 +212,29 @@ p{
 
 @media screen and (max-width:768px){
     header {
-        background-image: linear-gradient(grey, rgb(161, 161, 161), white);
-        grid-area: header;
-        display: flex;
-        position: sticky;
-        top: 0px;
-        border-color: black;
-        border: solid;
         flex-wrap: wrap;
         z-index: 200;
+        height: 250px;
     }
     .logo {
         background-image: linear-gradient(grey, rgb(161, 161, 161), white);
         width: 70%;
         display: flex;
+        margin-left: 15px;
     }
     .logo-img {
-        width: 50px;
-        padding-left: 5px;
+        width: 80px;
     }
     .logo a h2{
         text-decoration: none;
-        padding-left: 120px;
-        padding-top: 5px;
+        padding-left: 30px;
         font-size: 52px;
         color:white;
         font-weight: 100;
         font-family: 'Monoton', cursive;
     }
     h3{
-        padding-left: 250px;
+        padding-left: 200px;
         font-family: 'Great Vibes', cursive;
         font-size: 150%;
     }
@@ -232,27 +242,25 @@ p{
         display: inline-block;
     }
     .menu {
-        background-color:rgb(161, 161, 161);
         width: 100%;
         display: flex;
+        margin-left: 1%;
+        margin-right: 1%;
     }
     .menu nav ul li{
         display: flex;
-        list-style-type: none;
-        padding: 5px 5px;
+        padding: 3px 3px;
         flex-direction: column;
     }
     .menu nav ul li a{
         text-decoration: none;
         font-family: 'Alice', serif;
-        font-size: 130%;
+        font-size: 120%;
         color: white;
     }
-    .img-background {
-        height: 800px;
-        background-image: url(../media/feel2.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
+    .menu nav ul li a:hover {
+        color: black;
+        font-size: 125%;
     }
     .main_contacto {
         grid-area: main;
@@ -262,10 +270,6 @@ p{
         background-color: rgb(212, 212, 212);
     }
     h4{
-        text-align: center;
-        padding: 20px;
-        width: 100%;
-        font-family: 'Alice', serif;
         font-size: 180%;
     }
     form{
@@ -337,6 +341,10 @@ p{
         font-size: 100%;
         text-align: justify;  
     }
+    .ul_chords li{
+        font-size: 100%;
+        padding: 2px;
+    }
     .about {
         width: 98%;
         padding: 5px
@@ -352,9 +360,13 @@ p{
         width: 98%;
         padding: 5px;
     }
+    .chords {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 @media screen and (max-width:480px){
-    .index_grid {
+    /*.index_grid {
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: auto auto auto;
@@ -362,41 +374,27 @@ p{
             "header"
             "main"
             "footer";
-    }
+    }*/
     header {
-        background-image: linear-gradient(grey, rgb(161, 161, 161), white);
-        grid-area: header;
-        display: flex;
-        position: sticky;
-        top: 0px;
-        border-color: black;
-        border: solid;
-        flex-wrap: wrap;
-        z-index: 200;
+        height: 230px;
     }
     .logo {
-        background-image: linear-gradient(grey, rgb(161, 161, 161), white);
-        width: 80%;
-        display: flex;
+        width: 75%;
+        margin-left: 5px;
     }
     .logo-img {
         width: 50px;
-        padding-left: 15px;
     }
     .logo a h2{
-        text-align: left;
-        text-decoration: none;
-        padding-left: 12px;
+        padding-left: 10px;
         padding-top: 5px;
-        font-size: 47px;
-        color:white;
-        font-weight: 100;
-        font-family: 'Monoton', cursive;
+        font-size: 35px;
+        font-weight: 80;
     }
     h3{
-        padding-left: 100px;
+        padding-left: 80px;
         font-family: 'Great Vibes', cursive;
-        font-size: 150%;
+        font-size: 130%;
     }
     header a {
         display: inline-block;
@@ -415,14 +413,15 @@ p{
     .menu nav ul li a{
         text-decoration: none;
         font-family: 'Alice', serif;
-        font-size: 130%;
+        font-size: 100%;
         color: white;
     }
-    .img-background {
-        height: 800px;
-        background-image: url(../media/feel2.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
+    .menu nav ul li a:hover {
+        color: black;
+        font-size: 105%;
+    }
+    h4{
+        font-size: 150%;
     }
     fieldset {
         width: 85%;
@@ -475,6 +474,10 @@ p{
         font-size: 100%;
         text-align: justify;  
     }
+    .ul_chords li{
+        font-size: 90%;
+        padding: 1px;
+    }
     .about {
         width: 98%;
         padding: 5px
@@ -489,5 +492,8 @@ p{
         justify-content: space-around;
         width: 98%;
         padding: 5px;
+    }
+    iframe{
+        width: 430px;
     }
 }
