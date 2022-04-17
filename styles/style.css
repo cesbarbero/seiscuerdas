@@ -191,9 +191,9 @@ p{
     border: solid;
     margin-bottom: 2px;
 }
-.def_chord p{
-    width: 50%;
-    font-size: 50%;
+.txtDefChord{
+    width: 100%;
+    font-size: 110%;
 }
 .about {
     width: 55%;
@@ -293,7 +293,7 @@ p{
     }
     fieldset {
         width: 85%;
-        padding: 15px;
+        padding: 10px;
     }
     fieldset legend{
         font-family: 'Alice', serif;
@@ -305,7 +305,7 @@ p{
     }
     h6 {
         font-family: 'Alice', serif;
-        font-size: 20px;
+        font-size: 18px;
         display: inline-block;
         padding: 5px;
     }
@@ -437,7 +437,6 @@ p{
     }
     h6 {
         font-family: 'Alice', serif;
-        font-size: 20px;
         display: inline-block;
         padding: 5px;
         width: 75%;
