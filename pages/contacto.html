@@ -18,88 +18,78 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <header>
-                    <div class="logo">
-                        <a href="../index.html">
-                            <h2>seiscuerdas</h2>
-                        </a>
-                        <h3>Sólo voy donde me lleve la guitarra...</h3>
-                    </div>
-                    <a href="../index.html"><img class="logo-img" src="../media/favicon-modified.png"
-                            alt="logoimagen"></a>
-                    <div class="menu">
-                        <nav>
-                            <ul>
-                                <li><a href="../pages/guitarras.html">GUITARRAS</a></li>
-                                <li><a href="../pages/acordes.html">ACORDES</a></li>
-                                <li><a href="../pages/experimenta.html">EXPERIMENTA</a></li>
-                                <li><a href="../pages/contacto.html">CONTACTO</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
+        <header class="row bkgcolor">
+            <div class="col-lg-5 col-md-10 col-10 logo">
+                <a href="../index.html">
+                    <h2>seiscuerdas</h2>
+                </a>
+                <h3>Sólo voy donde me lleve la guitarra...</h3>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <main class="main_contacto">
-                    <h4>CONTACTO</h4>
-                    <form method="get">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" placeholder="Ingresá tu nombre" name="nombre">
-                        <label for="email">Email:</label>
-                        <input type="email" placeholder="Ingresá tu mail" name="email">
-                        <fieldset>
-                            <legend>¿Qué tipo de guitarra preferís?</legend>
-                            <input class="check" type="checkbox" value="1">
-                            <h6>Acústica o criolla</h6>
-                            <input class="check" type="checkbox" value="2">
-                            <h6>Electroacústica</h6>
-                            <input class="check" type="checkbox" value="2">
-                            <h6>Eléctrica</h6>
-                        </fieldset>
-                        <fieldset>
-                            <legend>¿Difrutaste el recorrido?</legend>
-                            <input class="check" type="radio" value="ok" name="exper">
-                            <h6>Lo pasé GENIAL!</h6>
-                            <input class="check" type="radio" value="reg" name="exper">
-                            <h6>Tal vez vuelva...</h6>
-                            <input class="check" type="radio" value="bad" name="exper">
-                            <h6>Esto no es lo mío</h6>
-                        </fieldset>
-                        <label for="exp">Comentarios</label>
-                        <textarea cols="30" rows="10" name="exp"></textarea>
-                        <input class="butt" type="submit" value="Enviar">
-                        <input class="butt" type="reset" value="Limpiar campos">
-                    </form>
-                </main>
+            <a class="col-lg-1 col-md-2 col-2" href="../index.html"><img class="logo-img"
+                    src="../media/favicon-modified.png" alt="logoimagen"></a>
+            <div class="col-lg-6 col-md-12 col-12 menu bkgcolor">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="../pages/guitarras.html">GUITARRAS</a></li>
+                        <li><a href="../pages/acordes.html">ACORDES</a></li>
+                        <li><a href="../pages/experimenta.html">EXPERIMENTA</a></li>
+                        <li><a href="../pages/contacto.html">CONTACTO</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <footer>
-                    <div class="about">
-                        <p>SOBRE MI: Soy esposo, padre, y empleado. A los 36 años me di cuenta de que no quería llegar a
-                            viejo
-                            sin saber tocar la guitarra. Luego de 2 años y varios altibajos, es una idea firme que me
-                            hace
-                            levantarme de la silla, saludar a mi compañera y sentir la suave caricia de sus seis
-                            cuerdas...</p>
-                    </div>
-                    <div class="icons">
-                        <a href=https://open.spotify.com/playlist/2f7SCHWH9bgVk6xeINnErx?si=02801fd9607d4de6
-                            target="_blank">
-                            <img class="iconSize" src="../media/spotify.png" alt="spotify"></a>
-                        <a href=https://www.instagram.com/cesbarbero target="_blank"> <img class="iconSize"
-                                src="../media/instagram.png" alt="instagram"></a>
-                        <a href=https://www.facebook.com/cesar.barbero.7 target="_blank"> <img class="iconSize"
-                                src="../media/facebook.png" alt="facebook"></a>
-                    </div>
-                </footer>
+        </header>
+        <main class="row bkgimage">
+            <div class="col-lg-12 col-md-12 col-12">
+                <h4>CONTACTO</h4>
+                <form method="get" role="form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" placeholder="Ingresá tu nombre" name="nombre">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="Ingresá tu mail" name="email">
+                    <fieldset>
+                        <legend>¿Qué tipo de guitarra preferís?</legend>
+                        <input class="check" type="checkbox" value="1">
+                        <h6>Acústica o criolla</h6>
+                        <input class="check" type="checkbox" value="2">
+                        <h6>Electroacústica</h6>
+                        <input class="check" type="checkbox" value="2">
+                        <h6>Eléctrica</h6>
+                    </fieldset>
+                    <fieldset>
+                        <legend>¿Difrutaste el recorrido?</legend>
+                        <input class="check" type="radio" value="ok" name="exper">
+                        <h6>Lo pasé GENIAL!</h6>
+                        <input class="check" type="radio" value="reg" name="exper">
+                        <h6>Tal vez vuelva...</h6>
+                        <input class="check" type="radio" value="bad" name="exper">
+                        <h6>Esto no es lo mío</h6>
+                    </fieldset>
+                    <label for="exp">Comentarios</label>
+                    <textarea cols="30" rows="10" name="exp"></textarea>
+                    <input class="butt" type="submit" value="Enviar">
+                    <input class="butt" type="reset" value="Limpiar campos">
+                </form>
             </div>
-        </div>
+        </main>
+        <footer class="row bkgcolor">
+            <div class="col-lg-8 col-md-12 col-12">
+                <p>SOBRE MI: Soy esposo, padre, y empleado. A los 36 años me di cuenta de que no quería llegar a
+                    viejo
+                    sin saber tocar la guitarra. Luego de 2 años y varios altibajos, es una idea firme que me
+                    hace
+                    levantarme de la silla, saludar a mi compañera y sentir la suave caricia de sus seis
+                    cuerdas...</p>
+            </div>
+            <div class="col-lg-4 col-md-12 col-12 icons">
+                <a href=https://open.spotify.com/playlist/2f7SCHWH9bgVk6xeINnErx?si=02801fd9607d4de6 target="_blank">
+                    <img class="iconSize" src="../media/spotify.png" alt="spotify"></a>
+                <a href=https://www.instagram.com/cesbarbero target="_blank"> <img class="iconSize"
+                        src="../media/instagram.png" alt="instagram"></a>
+                <a href=https://www.facebook.com/cesar.barbero.7 target="_blank"> <img class="iconSize"
+                        src="../media/facebook.png" alt="facebook"></a>
+            </div>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
