@@ -1,0 +1,8 @@
+Se aplicaron "keywords": seiscuerdas, guitarra, aprender, sonidos, música, cuerdas, tocar, instrumento, acorde, etc. en todas las páginas.
+Se aplicó "description" a todas las páginas.
+Se aplicó el atributo "alt" a la mayoría de las imágenes del sitio.
+Por lo gral, los encabezados definen la estructura de los contenidos (en las páginas más desarrolladas).
+Se extendió el título de cada página con un breve detalle luego de un guión.
+Se probó la página en la Prueba de optimización para móviles de Google.
+    Por ej la página "Acordes" (la más completa), con resultado "optimizada", Link: https://search.google.com/test/mobile-friendly/result?id=86xXu3foIEbgcg2_83I1FQ&hl=ES
+

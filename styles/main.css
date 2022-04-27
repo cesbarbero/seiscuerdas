@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/*MAPA
+Declaracion de mapa*/
+/*MIXIN
+Declaracion de mixin*/
+/*EXTEND
+Se creó la clase .txtDefChord2 con atributos de la clase .txtDefChord*/
+* {
+  margin: 0;
+  padding: 0; }
+
+.bkgcolor {
+  background-image: linear-gradient(grey, #a1a1a1, white); }
+
+.bkgimage {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../media/bkgimage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+header {
+  top: 0;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  border-color: black;
+  border: solid;
+  z-index: 10; }
+
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 5%; }
+
+@keyframes girar {
+  0% {
+    transform: rotate(359deg); } }
+
+.logo-img {
+  width: 105px;
+  animation-name: girar;
+  animation-delay: 3s;
+  animation-duration: 0.6s;
+  animation-iteration-count: 3;
+  animation-timing-function: linear; }
+
+.logo a h2 {
+  padding-left: 30px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 0rem;
+  text-align: left;
+  text-decoration: none;
+  font-size: 70px;
+  font-weight: 100;
+  font-family: 'Monoton', cursive; }
+
+h3 {
+  padding-left: 330px;
+  margin-bottom: 0rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 200%; }
+
+/*@keyframes mover { "USAR OPACITY"
+    0% {
+        transform: translate(250px, 0px);
+    }
+}
+
+.mov_h3 {
+    /*@extend h3;
+    transition: all 2s ease-in-out;
+
+    animation: {
+        name: mover;
+        delay: 3s;
+        duration: 2s;
+        iteration-count: 1;
+        timing-function: linear;
+    }
+}*/
+.menu {
+  display: flex;
+  justify-content: space-around;
+  width: 42%;
+  border-radius: 15px; }
+  .menu nav ul {
+    margin-bottom: 0;
+    padding-left: 0; }
+    .menu nav ul li {
+      list-style-type: none;
+      display: inline-block;
+      padding: 20px 15px; }
+      .menu nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-family: "Alice", serif;
+        font-size: 130%; }
+        .menu nav ul li a:hover {
+          color: white;
+          font-size: 135%; }
+
+.img-background {
+  height: 850px;
+  background-image: url(../media/feel2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+h4 {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 0;
+  font-family: "Alice", serif;
+  font-size: 250%; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  border: solid;
+  margin-left: auto;
+  margin-right: auto; }
+
+label {
+  padding: 15px;
+  text-align: left;
+  font-family: "Alice", serif;
+  font-size: 30px; }
+
+input {
+  font-family: "Alice", serif;
+  font-size: 20px;
+  padding: 5px;
+  width: 70%; }
+  input:focus {
+    background-color: lemonchiffon; }
+
+fieldset {
+  width: 70%;
+  margin: 15px;
+  border: solid; }
+  fieldset legend {
+    padding: 15px;
+    font-family: "Alice", serif;
+    font-size: 30px; }
+
+.check {
+  width: 70px; }
+
+h6 {
+  display: inline-block;
+  padding: 5px;
+  font-family: "Alice", serif;
+  font-size: 20px; }
+
+textarea {
+  width: 70%;
+  padding: 15px;
+  margin-bottom: 15px; }
+  textarea:focus {
+    background-color: lemonchiffon; }
+
+.butt {
+  width: 20%;
+  flex-direction: row;
+  margin-bottom: 15px; }
+
+h5 {
+  position: absolute;
+  top: 650px;
+  right: 70px;
+  left: 1300px;
+  text-align: justify;
+  font-family: "Alice", serif;
+  font-size: 130%; }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  border: solid;
+  border-color: black; }
+
+p {
+  text-align: justify;
+  margin-bottom: 0;
+  padding: 10px;
+  font-family: "Alice", serif;
+  font-size: 130%; }
+
+.ul_chords li {
+  text-align: justify;
+  padding: 3px;
+  font-family: "Alice", serif;
+  font-size: 120%; }
+
+.chords {
+  display: flex;
+  height: auto;
+  border: solid;
+  margin-bottom: 2px; }
+
+.txtDefChord, .txtDefChord2 {
+  width: 100%;
+  font-size: 110%; }
+
+.txtDefChord2 {
+  color: darkcyan;
+  font-style: italic;
+  background-color: antiquewhite; }
+
+.iconSize {
+  height: 60px;
+  width: 60px; }
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  padding: 25px; }
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-wrap: wrap; }
+  .logo {
+    width: 80%;
+    margin-left: 15px;
+    margin-right: 0%; }
+  .logo-img {
+    width: 80px; }
+  .logo a h2 {
+    padding-left: 30px;
+    font-size: 60px;
+    font-weight: 100; }
+  h3 {
+    padding-left: 250px;
+    font-size: 150%; }
+  .menu {
+    width: 100%;
+    justify-content: space-around;
+    border-radius: 15px; }
+    .menu nav ul li {
+      display: inline-block;
+      padding: 20px 15px; }
+      .menu nav ul li a {
+        font-size: 120%; }
+        .menu nav ul li a:hover {
+          font-size: 125%; }
+  h4 {
+    font-size: 180%; }
+  form {
+    width: 95%; }
+  label {
+    font-size: 28px;
+    padding: 15px; }
+  input {
+    font-size: 15px;
+    padding: 5px;
+    width: 85%; }
+  fieldset {
+    width: 85%;
+    padding: 10px; }
+    fieldset legend {
+      font-size: 28px;
+      padding: 15px; }
+  .check {
+    width: 40px; }
+  h6 {
+    font-size: 18px;
+    padding: 5px; }
+  textarea {
+    width: 85%;
+    padding: 15px;
+    margin-bottom: 15px; }
+  .butt {
+    width: 40%;
+    flex-direction: row;
+    margin-bottom: 15px; }
+  h5 {
+    position: absolute;
+    top: 900px;
+    right: 10px;
+    left: 10px;
+    font-size: 110%;
+    color: white; }
+  footer {
+    flex-direction: column; }
+  p {
+    font-size: 100%; }
+  .ul_chords li {
+    font-size: 100%;
+    padding: 2px; }
+  .txtDefChord, .txtDefChord2 {
+    font-size: 100%; }
+  .iconSize {
+    height: 60px;
+    width: 60px;
+    padding-top: 5px; }
+  .icons {
+    width: 100%;
+    padding: 5px; }
+  .chords {
+    flex-direction: column;
+    align-items: center; } }
+
+@media screen and (max-width: 480px) {
+  .logo {
+    margin-left: 8px; }
+  .logo-img {
+    width: 50px; }
+  .logo a h2 {
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: 80; }
+  h3 {
+    padding-left: 100px;
+    font-size: 120%; }
+  .menu nav ul li a {
+    font-size: 90%; }
+  .menu nav ul li a:hover {
+    font-size: 100%; }
+  .menu nav ul li {
+    padding: 5px 5px; }
+    .menu nav ul li a {
+      font-size: 90%; }
+      .menu nav ul li a:hover {
+        font-size: 100%; }
+  h4 {
+    font-size: 150%; }
+  fieldset legend {
+    font-size: 24px;
+    padding: 5px; }
+  .check {
+    width: 30%; }
+  h5 {
+    top: 750px; }
+  p {
+    font-size: 80%; }
+  .ul_chords li {
+    font-size: 90%;
+    padding: 1px; }
+  .txtDefChord, .txtDefChord2 {
+    font-size: 90%; }
+  .iconSize {
+    height: 40px;
+    width: 40px; }
+  .vid_chord {
+    margin-left: auto;
+    margin-right: auto; } }
