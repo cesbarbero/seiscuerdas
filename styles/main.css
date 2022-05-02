@@ -9,9 +9,11 @@ Se creó la clase .txtDefChord2 con atributos de la clase .txtDefChord*/
   margin: 0;
   padding: 0; }
 
+/*Color de fondo de header y footer*/
 .bkgcolor {
   background-image: linear-gradient(grey, #a1a1a1, white); }
 
+/*Fondo de todas las páginas*/
 .bkgimage {
   background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../media/bkgimage.jpg");
   background-size: cover;
@@ -27,24 +29,27 @@ header {
   border: solid;
   z-index: 10; }
 
+/*div de titulo y logo en el header*/
 .logo {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: 5%; }
+  justify-content: space-between; }
 
+/*Animación del logo del sitio*/
 @keyframes girar {
   0% {
     transform: rotate(359deg); } }
 
+/*Logo del sitio*/
 .logo-img {
-  width: 105px;
+  width: 80px;
   animation-name: girar;
   animation-delay: 3s;
   animation-duration: 0.6s;
   animation-iteration-count: 3;
   animation-timing-function: linear; }
 
+/*Titulo seiscuerdas principal*/
 .logo a h2 {
   padding-left: 30px;
   color: white;
@@ -52,68 +57,73 @@ header {
   margin-bottom: 0rem;
   text-align: left;
   text-decoration: none;
-  font-size: 70px;
+  font-size: 50px;
   font-weight: 100;
   font-family: 'Monoton', cursive; }
 
+/*Frase debajo del titulo seiscuerdas*/
 h3 {
-  padding-left: 330px;
+  padding-left: 200px;
   margin-bottom: 0rem;
   font-family: "Great Vibes", cursive;
-  font-size: 200%; }
+  font-size: 150%; }
 
-/*@keyframes mover { "USAR OPACITY"
-    0% {
-        transform: translate(250px, 0px);
-    }
-}
-
-.mov_h3 {
-    /*@extend h3;
-    transition: all 2s ease-in-out;
-
-    animation: {
-        name: mover;
-        delay: 3s;
-        duration: 2s;
-        iteration-count: 1;
-        timing-function: linear;
-    }
-}*/
 .menu {
   display: flex;
   justify-content: space-around;
-  width: 42%;
-  border-radius: 15px; }
+  border-radius: 15px;
+  flex-wrap: nowrap; }
   .menu nav ul {
     margin-bottom: 0;
     padding-left: 0; }
     .menu nav ul li {
       list-style-type: none;
       display: inline-block;
-      padding: 20px 15px; }
+      padding: 20px 17px; }
       .menu nav ul li a {
         text-decoration: none;
         color: black;
         font-family: "Alice", serif;
-        font-size: 130%; }
+        font-size: 80%; }
         .menu nav ul li a:hover {
           color: white;
-          font-size: 135%; }
+          font-size: 90%; }
 
+/*Fondo del main de la página index*/
 .img-background {
   height: 850px;
   background-image: url(../media/feel2.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
+/*Titulo de las páginas*/
 h4 {
   text-align: center;
   padding: 10px;
   width: 100%;
   margin-bottom: 0;
   font-family: "Alice", serif;
-  font-size: 250%; }
+  font-size: 180%; }
+
+.parts {
+  border-radius: 8%;
+  border: solid;
+  width: 70%;
+  margin-bottom: 20px; }
+
+.acus_img {
+  border-radius: 8%;
+  margin-bottom: 20px; }
+
+.guitar_desc p {
+  font-size: 120%; }
+
+.exp_img {
+  border-radius: 8%;
+  padding: 25px; }
+
+.exp_fr {
+  padding: 10px; }
 
 form {
   display: flex;
@@ -128,11 +138,11 @@ label {
   padding: 15px;
   text-align: left;
   font-family: "Alice", serif;
-  font-size: 30px; }
+  font-size: 25px; }
 
 input {
   font-family: "Alice", serif;
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px;
   width: 70%; }
   input:focus {
@@ -145,7 +155,7 @@ fieldset {
   fieldset legend {
     padding: 15px;
     font-family: "Alice", serif;
-    font-size: 30px; }
+    font-size: 25px; }
 
 .check {
   width: 70px; }
@@ -154,7 +164,7 @@ h6 {
   display: inline-block;
   padding: 5px;
   font-family: "Alice", serif;
-  font-size: 20px; }
+  font-size: 15px; }
 
 textarea {
   width: 70%;
@@ -172,7 +182,7 @@ h5 {
   position: absolute;
   top: 650px;
   right: 70px;
-  left: 1300px;
+  left: 800px;
   text-align: justify;
   font-family: "Alice", serif;
   font-size: 130%; }
@@ -231,29 +241,34 @@ p {
   .logo-img {
     width: 80px; }
   .logo a h2 {
-    padding-left: 30px;
-    font-size: 60px;
-    font-weight: 100; }
+    padding-left: px;
+    font-size: 50px;
+    font-weight: 80; }
   h3 {
-    padding-left: 250px;
-    font-size: 150%; }
+    padding-left: 170px;
+    font-size: 135%; }
   .menu {
     width: 100%;
     justify-content: space-around;
     border-radius: 15px; }
     .menu nav ul li {
       display: inline-block;
-      padding: 20px 15px; }
+      padding: 8px 8px; }
       .menu nav ul li a {
-        font-size: 120%; }
+        font-size: 95%; }
         .menu nav ul li a:hover {
-          font-size: 125%; }
+          font-size: 100%; }
   h4 {
     font-size: 180%; }
+  .parts {
+    width: 100%; }
+  /*Ordena imagenes y texto en pagina Guitarras*/
+  .first {
+    order: -1; }
   form {
     width: 95%; }
   label {
-    font-size: 28px;
+    font-size: 20px;
     padding: 15px; }
   input {
     font-size: 15px;
@@ -263,7 +278,7 @@ p {
     width: 85%;
     padding: 10px; }
     fieldset legend {
-      font-size: 28px;
+      font-size: 20px;
       padding: 15px; }
   .check {
     width: 40px; }
@@ -280,7 +295,7 @@ p {
     margin-bottom: 15px; }
   h5 {
     position: absolute;
-    top: 900px;
+    top: 850px;
     right: 10px;
     left: 10px;
     font-size: 110%;
@@ -311,26 +326,21 @@ p {
   .logo-img {
     width: 50px; }
   .logo a h2 {
-    padding-left: 20px;
-    font-size: 25px;
-    font-weight: 80; }
+    padding-left: 5px;
+    font-size: 30px;
+    font-weight: 60; }
   h3 {
-    padding-left: 100px;
-    font-size: 120%; }
-  .menu nav ul li a {
-    font-size: 90%; }
-  .menu nav ul li a:hover {
-    font-size: 100%; }
+    padding-left: 80px;
+    font-size: 115%; }
   .menu nav ul li {
-    padding: 5px 5px; }
+    padding: 2px 2px; }
     .menu nav ul li a {
-      font-size: 90%; }
+      font-size: 55%; }
       .menu nav ul li a:hover {
-        font-size: 100%; }
+        font-size: 60%; }
   h4 {
     font-size: 150%; }
   fieldset legend {
-    font-size: 24px;
     padding: 5px; }
   .check {
     width: 30%; }

@@ -25,10 +25,12 @@ Se creó la clase .txtDefChord2 con atributos de la clase .txtDefChord*/
     padding: 0;
 }
 
+/*Color de fondo de header y footer*/
 .bkgcolor {
     background-image: linear-gradient(grey, rgb(161, 161, 161), white);
 }
 
+/*Fondo de todas las páginas*/
 .bkgimage {
     background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../media/bkgimage.jpg");
     background-size: cover;
@@ -46,21 +48,23 @@ header {
     z-index: 10;
 }
 
+/*div de titulo y logo en el header*/
 .logo {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-right: 5%;
 }
 
+/*Animación del logo del sitio*/
 @keyframes girar {
     0% {
         transform: rotate(359deg);
     }
 }
 
+/*Logo del sitio*/
 .logo-img {
-    width: 105px;
+    width: 80px;
 
     animation: {
         name: girar;
@@ -71,6 +75,7 @@ header {
     }
 }
 
+/*Titulo seiscuerdas principal*/
 .logo {
     a {
         h2 {
@@ -85,7 +90,7 @@ header {
             }
 
             font: {
-                size: 70px;
+                size: 50px;
                 weight: 100;
                 family: 'Monoton', cursive;
             }
@@ -93,38 +98,21 @@ header {
     }
 }
 
+/*Frase debajo del titulo seiscuerdas*/
 h3 {
-    padding-left: 330px;
+    padding-left: 200px;
     margin-bottom: 0rem;
 
     font: {
         family: map-get($fuentes, fuente2);
-        size: 20*(map-get($fuentes, medida1));
+        size: 15*(map-get($fuentes, medida1));
     }
 }
 
-/*@keyframes mover { "USAR OPACITY"
-    0% {
-        transform: translate(250px, 0px);
-    }
-}
-
-.mov_h3 {
-    /*@extend h3;
-    transition: all 2s ease-in-out;
-
-    animation: {
-        name: mover;
-        delay: 3s;
-        duration: 2s;
-        iteration-count: 1;
-        timing-function: linear;
-    }
-}*/
 .menu {
     @include flexSpaceAround;
-    width: 42%;
     border-radius: 15px;
+    flex-wrap: nowrap;
 
     nav {
         ul {
@@ -134,7 +122,7 @@ h3 {
             li {
                 list-style-type: none;
                 display: inline-block;
-                padding: 20px 15px;
+                padding: 20px 17px;
 
                 a {
                     text-decoration: none;
@@ -142,12 +130,12 @@ h3 {
 
                     font: {
                         family: map-get($fuentes, fuente1);
-                        size: 13*(map-get($fuentes, medida1));
+                        size: 8*(map-get($fuentes, medida1));
                     }
 
                     &:hover {
                         color: white;
-                        font-size: 135%;
+                        font-size: 90%;
                     }
                 }
             }
@@ -155,6 +143,7 @@ h3 {
     }
 }
 
+/*Fondo del main de la página index*/
 .img-background {
     height: 850px;
     background-image: url(../media/feel2.jpg);
@@ -165,6 +154,7 @@ h3 {
     }
 }
 
+/*Titulo de las páginas*/
 h4 {
     text-align: center;
     padding: 10px;
@@ -173,8 +163,33 @@ h4 {
 
     font: {
         family: map-get($fuentes, fuente1);
-        size: 25*(map-get($fuentes, medida1));
+        size: 18*(map-get($fuentes, medida1));
     }
+}
+
+.parts {
+    border-radius: 8%;
+    border: solid;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.acus_img {
+    border-radius: 8%;
+    margin-bottom: 20px;
+}
+
+.guitar_desc {
+    p {
+        font-size: 12*(map-get($fuentes, medida1));
+    }
+}
+.exp_img {
+    border-radius: 8%;
+    padding: 25px;
+}
+.exp_fr{
+    padding: 10px;
 }
 
 form {
@@ -196,14 +211,14 @@ label {
 
     font: {
         family: map-get($fuentes, fuente1);
-        size: 3*(map-get($fuentes, medida2));
+        size: 2.5*(map-get($fuentes, medida2));
     }
 }
 
 input {
     font: {
         family: $fontFamilyPpal;
-        size: 20px;
+        size: 15px;
     }
 
     padding: 5px;
@@ -224,7 +239,7 @@ fieldset {
 
         font: {
             family: map-get($fuentes, fuente1);
-            size: 3*(map-get($fuentes, medida2));
+            size: 2.5*(map-get($fuentes, medida2));
         }
     }
 }
@@ -239,7 +254,7 @@ h6 {
 
     font: {
         family: map-get($fuentes, fuente1);
-        size: 2*(map-get($fuentes, medida2));
+        size: 1.5*(map-get($fuentes, medida2));
     }
 }
 
@@ -263,7 +278,7 @@ h5 {
     position: absolute;
     top: 650px;
     right: 70px;
-    left: 1300px;
+    left: 800px;
     text-align: justify;
 
     font: {
@@ -352,19 +367,19 @@ p {
     .logo {
         a {
             h2 {
-                padding-left: 30px;
+                padding-left: px;
 
                 font: {
-                    size: 60px;
-                    weight: 100;
+                    size: 50px;
+                    weight: 80;
                 }
             }
         }
     }
 
     h3 {
-        padding-left: 250px;
-        font-size: 150%;
+        padding-left: 170px;
+        font-size: 135%;
     }
 
     .menu {
@@ -376,13 +391,13 @@ p {
             ul {
                 li {
                     display: inline-block;
-                    padding: 20px 15px;
+                    padding: 8px 8px;
 
                     a {
-                        font-size: 120%;
+                        font-size: 95%;
 
                         &:hover {
-                            font-size: 125%;
+                            font-size: 100%;
                         }
                     }
                 }
@@ -394,12 +409,21 @@ p {
         font-size: 180%;
     }
 
+    .parts {
+        width: 100%;
+    }
+
+    /*Ordena imagenes y texto en pagina Guitarras*/
+    .first {
+        order: -1;
+    }
+
     form {
         width: 95%;
     }
 
     label {
-        font-size: 28px;
+        font-size: 2*(map-get($fuentes, medida2));
         padding: 15px;
     }
 
@@ -414,7 +438,7 @@ p {
         padding: 10px;
 
         legend {
-            font-size: 28px;
+            font-size: 2*(map-get($fuentes, medida2));
             padding: 15px;
         }
     }
@@ -442,7 +466,7 @@ p {
 
     h5 {
         position: absolute;
-        top: 900px;
+        top: 850px;
         right: 10px;
         left: 10px;
         font-size: 110%;
@@ -497,40 +521,32 @@ p {
     .logo {
         a {
             h2 {
-                padding-left: 20px;
+                padding-left: 5px;
 
                 font: {
-                    size: 25px;
-                    weight: 80;
+                    size: 30px;
+                    weight: 60;
                 }
             }
         }
     }
 
     h3 {
-        padding-left: 100px;
-        font-size: 120%;
-    }
-
-    .menu nav ul li a {
-        font-size: 90%;
-    }
-
-    .menu nav ul li a:hover {
-        font-size: 100%;
+        padding-left: 80px;
+        font-size: 115%;
     }
 
     .menu {
         nav {
             ul {
                 li {
-                    padding: 5px 5px;
+                    padding: 2px 2px;
 
                     a {
-                        font-size: 90%;
+                        font-size: 55%;
 
                         &:hover {
-                            font-size: 100%;
+                            font-size: 60%;
                         }
                     }
                 }
@@ -544,7 +560,6 @@ p {
 
     fieldset {
         legend {
-            font-size: 24px;
             padding: 5px;
         }
     }
