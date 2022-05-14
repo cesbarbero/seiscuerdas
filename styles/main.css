@@ -15,7 +15,7 @@ Se creó la clase .txtDefChord2 con atributos de la clase .txtDefChord*/
 
 /*Fondo de todas las páginas*/
 .bkgimage {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../media/bkgimage.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("../media/bkgimage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; }
@@ -38,16 +38,16 @@ header {
 /*Animación del logo del sitio*/
 @keyframes girar {
   0% {
-    transform: rotate(359deg); } }
+    transform: rotate(1080deg); } }
 
 /*Logo del sitio*/
 .logo-img {
   width: 80px;
   animation-name: girar;
   animation-delay: 3s;
-  animation-duration: 0.6s;
-  animation-iteration-count: 3;
-  animation-timing-function: linear; }
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out; }
 
 /*Titulo seiscuerdas principal*/
 .logo a h2 {
@@ -63,31 +63,32 @@ header {
 
 /*Frase debajo del titulo seiscuerdas*/
 h3 {
-  padding-left: 200px;
+  padding-left: 150px;
   margin-bottom: 0rem;
   font-family: "Great Vibes", cursive;
   font-size: 150%; }
 
+.radius {
+  border-radius: 15px; }
+
 .menu {
   display: flex;
   justify-content: space-around;
-  border-radius: 15px;
-  flex-wrap: nowrap; }
+  border-radius: 15px; }
   .menu nav ul {
     margin-bottom: 0;
     padding-left: 0; }
     .menu nav ul li {
       list-style-type: none;
       display: inline-block;
-      padding: 20px 17px; }
+      padding: 8px 10px; }
       .menu nav ul li a {
         text-decoration: none;
         color: black;
         font-family: "Alice", serif;
-        font-size: 80%; }
+        font-size: 100%; }
         .menu nav ul li a:hover {
-          color: white;
-          font-size: 90%; }
+          font-size: 110%; }
 
 /*Fondo del main de la página index*/
 .img-background {
@@ -100,37 +101,43 @@ h3 {
 h4 {
   text-align: center;
   padding: 10px;
-  width: 100%;
   margin-bottom: 0;
   font-family: "Alice", serif;
   font-size: 180%; }
 
+/*Imagen Partes de la guitarra*/
 .parts {
   border-radius: 8%;
   border: solid;
   width: 70%;
   margin-bottom: 20px; }
 
+/*Imagen acústica*/
 .acus_img {
   border-radius: 8%;
   margin-bottom: 20px; }
 
+/*Descripción del tipo de guitarra*/
 .guitar_desc p {
   font-size: 120%; }
 
+/*Imagen de acordes en pág. Experimenta*/
 .exp_img {
   border-radius: 8%;
   padding: 25px; }
 
+/*Video de pág. Experimenta*/
 .exp_fr {
   padding: 10px; }
 
+/*Formulario de contacto*/
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 60%;
   border: solid;
+  border-radius: 15px;
   margin-left: auto;
   margin-right: auto; }
 
@@ -138,7 +145,7 @@ label {
   padding: 15px;
   text-align: left;
   font-family: "Alice", serif;
-  font-size: 25px; }
+  font-size: 22px; }
 
 input {
   font-family: "Alice", serif;
@@ -151,15 +158,17 @@ input {
 fieldset {
   width: 70%;
   margin: 15px;
-  border: solid; }
+  border: solid;
+  border-radius: 15px; }
   fieldset legend {
     padding: 15px;
     font-family: "Alice", serif;
-    font-size: 25px; }
+    font-size: 22px; }
 
 .check {
-  width: 70px; }
+  width: 50px; }
 
+/*Texto de los fieldset*/
 h6 {
   display: inline-block;
   padding: 5px;
@@ -173,19 +182,23 @@ textarea {
   textarea:focus {
     background-color: lemonchiffon; }
 
+/*Botones del form*/
 .butt {
   width: 20%;
   flex-direction: row;
   margin-bottom: 15px; }
 
-h5 {
+/*Texto de la pág. index*/
+.text_ind {
   position: absolute;
-  top: 650px;
-  right: 70px;
-  left: 800px;
+  top: 440px;
+  right: 60px;
+  left: 720px;
   text-align: justify;
+  overflow: hidden;
   font-family: "Alice", serif;
-  font-size: 130%; }
+  font-size: 130%;
+  font-style: italic; }
 
 footer {
   display: flex;
@@ -193,43 +206,60 @@ footer {
   border: solid;
   border-color: black; }
 
-p {
+.text_foot {
   text-align: justify;
   margin-bottom: 0;
-  padding: 10px;
-  font-family: "Alice", serif;
-  font-size: 130%; }
+  margin-top: 7px; }
 
-.ul_chords li {
-  text-align: justify;
-  padding: 3px;
-  font-family: "Alice", serif;
-  font-size: 120%; }
-
-.chords {
-  display: flex;
-  height: auto;
-  border: solid;
-  margin-bottom: 2px; }
-
-.txtDefChord, .txtDefChord2 {
-  width: 100%;
-  font-size: 110%; }
-
-.txtDefChord2 {
-  color: darkcyan;
-  font-style: italic;
-  background-color: antiquewhite; }
-
+/*Iconos del footer*/
 .iconSize {
-  height: 60px;
-  width: 60px; }
+  height: 40px;
+  width: 40px; }
 
 .icons {
   display: flex;
   justify-content: space-around;
   width: 25%;
-  padding: 25px; }
+  padding: 25px;
+  filter: grayscale(90%); }
+  .icons:hover {
+    filter: none;
+    transition-property: filter;
+    transition-duration: 3s; }
+
+/*Inicio de cada pagina*/
+.descripcion {
+  text-align: justify;
+  margin-bottom: 0;
+  padding: 8px;
+  font-family: "Alice", serif;
+  font-size: 130%; }
+
+/*Lista no ordenada de la pág. Acordes*/
+.ul_chords li {
+  text-align: justify;
+  padding: 3px;
+  color: darkred;
+  font-family: "Alice", serif;
+  font-size: 120%; }
+
+/*Detalle de acordes*/
+.chords {
+  display: flex;
+  height: auto;
+  border: solid;
+  margin-bottom: 5px; }
+
+/*Textos de los acordes*/
+.txtDefChord, .txtDefChord2 {
+  font-size: 100%;
+  padding: 10px;
+  text-align: justify; }
+
+.txtDefChord2 {
+  color: darkred;
+  font-style: italic;
+  background-color: antiquewhite; }
 
 @media screen and (max-width: 768px) {
   header {
@@ -241,23 +271,17 @@ p {
   .logo-img {
     width: 80px; }
   .logo a h2 {
-    padding-left: px;
+    padding-left: 5px;
     font-size: 50px;
     font-weight: 80; }
   h3 {
-    padding-left: 170px;
-    font-size: 135%; }
+    padding-left: 5px;
+    font-size: 140%; }
   .menu {
-    width: 100%;
     justify-content: space-around;
     border-radius: 15px; }
-    .menu nav ul li {
-      display: inline-block;
-      padding: 8px 8px; }
-      .menu nav ul li a {
-        font-size: 95%; }
-        .menu nav ul li a:hover {
-          font-size: 100%; }
+    .menu nav ul li a {
+      font-size: 120%; }
   h4 {
     font-size: 180%; }
   .parts {
@@ -293,7 +317,7 @@ p {
     width: 40%;
     flex-direction: row;
     margin-bottom: 15px; }
-  h5 {
+  .text_ind {
     position: absolute;
     top: 850px;
     right: 10px;
@@ -302,13 +326,13 @@ p {
     color: white; }
   footer {
     flex-direction: column; }
-  p {
+  .descripcion {
     font-size: 100%; }
   .ul_chords li {
     font-size: 100%;
     padding: 2px; }
   .txtDefChord, .txtDefChord2 {
-    font-size: 100%; }
+    padding: 5px; }
   .iconSize {
     height: 60px;
     width: 60px;
@@ -320,6 +344,10 @@ p {
     flex-direction: column;
     align-items: center; } }
 
+.vid_chord {
+  margin-left: auto;
+  margin-right: auto; }
+
 @media screen and (max-width: 480px) {
   .logo {
     margin-left: 8px; }
@@ -330,32 +358,25 @@ p {
     font-size: 30px;
     font-weight: 60; }
   h3 {
-    padding-left: 80px;
-    font-size: 115%; }
+    padding-left: 5px;
+    font-size: 125%; }
   .menu nav ul li {
     padding: 2px 2px; }
     .menu nav ul li a {
-      font-size: 55%; }
-      .menu nav ul li a:hover {
-        font-size: 60%; }
+      font-size: 100%; }
   h4 {
     font-size: 150%; }
   fieldset legend {
     padding: 5px; }
   .check {
     width: 30%; }
-  h5 {
-    top: 750px; }
+  .text_ind {
+    top: 700px; }
   p {
     font-size: 80%; }
   .ul_chords li {
     font-size: 90%;
     padding: 1px; }
-  .txtDefChord, .txtDefChord2 {
-    font-size: 90%; }
   .iconSize {
     height: 40px;
-    width: 40px; }
-  .vid_chord {
-    margin-left: auto;
-    margin-right: auto; } }
+    width: 40px; } }

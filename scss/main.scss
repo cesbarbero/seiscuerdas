@@ -1,14 +1,16 @@
 $fontFamilyPpal: 'Alice',
-serif;
+    serif;
 $fontFamilySec: 'Great Vibes',
-cursive;
+    cursive;
 
 /*MAPA
 Declaracion de mapa*/
-$fuentes:(fuente1: $fontFamilyPpal,
+$fuentes: (
+    fuente1: $fontFamilyPpal,
     fuente2: $fontFamilySec,
     medida1: 10%,
-    medida2:10px);
+    medida2:10px
+);
 
 /*MIXIN
 Declaracion de mixin*/
@@ -32,7 +34,7 @@ Se creó la clase .txtDefChord2 con atributos de la clase .txtDefChord*/
 
 /*Fondo de todas las páginas*/
 .bkgimage {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../media/bkgimage.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url("../media/bkgimage.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -58,7 +60,7 @@ header {
 /*Animación del logo del sitio*/
 @keyframes girar {
     0% {
-        transform: rotate(359deg);
+        transform: rotate(1080deg);
     }
 }
 
@@ -69,9 +71,9 @@ header {
     animation: {
         name: girar;
         delay: 3s;
-        duration: 0.6s;
-        iteration-count: 3;
-        timing-function: linear;
+        duration: 4s;
+        iteration-count: 1;
+        timing-function: ease-out;
     }
 }
 
@@ -100,7 +102,7 @@ header {
 
 /*Frase debajo del titulo seiscuerdas*/
 h3 {
-    padding-left: 200px;
+    padding-left: 150px;
     margin-bottom: 0rem;
 
     font: {
@@ -109,10 +111,13 @@ h3 {
     }
 }
 
+.radius {
+    border-radius: 15px
+}
+
 .menu {
     @include flexSpaceAround;
     border-radius: 15px;
-    flex-wrap: nowrap;
 
     nav {
         ul {
@@ -122,7 +127,7 @@ h3 {
             li {
                 list-style-type: none;
                 display: inline-block;
-                padding: 20px 17px;
+                padding: 8px 10px;
 
                 a {
                     text-decoration: none;
@@ -130,12 +135,11 @@ h3 {
 
                     font: {
                         family: map-get($fuentes, fuente1);
-                        size: 8*(map-get($fuentes, medida1));
+                        size: 10*(map-get($fuentes, medida1));
                     }
 
                     &:hover {
-                        color: white;
-                        font-size: 90%;
+                        font-size: 11*(map-get($fuentes, medida1));
                     }
                 }
             }
@@ -158,7 +162,6 @@ h3 {
 h4 {
     text-align: center;
     padding: 10px;
-    width: 100%;
     margin-bottom: 0;
 
     font: {
@@ -167,6 +170,7 @@ h4 {
     }
 }
 
+/*Imagen Partes de la guitarra*/
 .parts {
     border-radius: 8%;
     border: solid;
@@ -174,30 +178,38 @@ h4 {
     margin-bottom: 20px;
 }
 
+/*Imagen acústica*/
 .acus_img {
     border-radius: 8%;
     margin-bottom: 20px;
 }
 
+/*Descripción del tipo de guitarra*/
 .guitar_desc {
     p {
         font-size: 12*(map-get($fuentes, medida1));
     }
 }
+
+/*Imagen de acordes en pág. Experimenta*/
 .exp_img {
     border-radius: 8%;
     padding: 25px;
 }
-.exp_fr{
+
+/*Video de pág. Experimenta*/
+.exp_fr {
     padding: 10px;
 }
 
+/*Formulario de contacto*/
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60%;
     border: solid;
+    border-radius: 15px;
 
     margin: {
         left: auto;
@@ -211,7 +223,7 @@ label {
 
     font: {
         family: map-get($fuentes, fuente1);
-        size: 2.5*(map-get($fuentes, medida2));
+        size: 2.2*(map-get($fuentes, medida2));
     }
 }
 
@@ -233,21 +245,23 @@ fieldset {
     width: 70%;
     margin: 15px;
     border: solid;
+    border-radius: 15px;
 
     legend {
         padding: 15px;
 
         font: {
             family: map-get($fuentes, fuente1);
-            size: 2.5*(map-get($fuentes, medida2));
+            size: 2.2*(map-get($fuentes, medida2));
         }
     }
 }
 
 .check {
-    width: 70px;
+    width: 50px;
 }
 
+/*Texto de los fieldset*/
 h6 {
     display: inline-block;
     padding: 5px;
@@ -268,22 +282,26 @@ textarea {
     }
 }
 
+/*Botones del form*/
 .butt {
     width: 20%;
     flex-direction: row;
     margin-bottom: 15px;
 }
 
-h5 {
+/*Texto de la pág. index*/
+.text_ind {
     position: absolute;
-    top: 650px;
-    right: 70px;
-    left: 800px;
+    top: 440px;
+    right: 60px;
+    left: 720px;
     text-align: justify;
+    overflow: hidden;
 
     font: {
         family: map-get($fuentes, fuente1);
         size: 13*(map-get($fuentes, medida1));
+        style: italic;
     }
 }
 
@@ -293,10 +311,36 @@ footer {
     border-color: black;
 }
 
-p {
+.text_foot {
     text-align: justify;
     margin-bottom: 0;
-    padding: 10px;
+    margin-top: 7px;
+}
+
+/*Iconos del footer*/
+.iconSize {
+    height: 40px;
+    width: 40px;
+}
+
+.icons {
+    @include flexSpaceAround;
+    width: 25%;
+    padding: 25px;
+    filter: grayscale(90%);
+
+    &:hover {
+        filter: none;
+        transition-property: filter;
+        transition-duration: 3s;
+    }
+}
+
+/*Inicio de cada pagina*/
+.descripcion {
+    text-align: justify;
+    margin-bottom: 0;
+    padding: 8px;
 
     font: {
         family: map-get($fuentes, fuente1);
@@ -304,10 +348,12 @@ p {
     }
 }
 
+/*Lista no ordenada de la pág. Acordes*/
 .ul_chords {
     li {
         text-align: justify;
         padding: 3px;
+        color: darkred;
 
         font: {
             family: map-get($fuentes, fuente1);
@@ -316,34 +362,26 @@ p {
     }
 }
 
+/*Detalle de acordes*/
 .chords {
     display: flex;
     height: auto;
     border: solid;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
+/*Textos de los acordes*/
 .txtDefChord {
-    width: 100%;
-    font-size: 11*(map-get($fuentes, medida1));
+    font-size: 10*(map-get($fuentes, medida1));
+    padding: 10px;
+    text-align: justify;
 }
 
 .txtDefChord2 {
     @extend .txtDefChord;
-    color: darkcyan;
+    color: darkred;
     font-style: italic;
     background-color: antiquewhite;
-}
-
-.iconSize {
-    height: 60px;
-    width: 60px;
-}
-
-.icons {
-    @include flexSpaceAround;
-    width: 25%;
-    padding: 25px;
 }
 
 @media screen and (max-width:768px) {
@@ -367,7 +405,7 @@ p {
     .logo {
         a {
             h2 {
-                padding-left: px;
+                padding-left: 5px;
 
                 font: {
                     size: 50px;
@@ -378,27 +416,19 @@ p {
     }
 
     h3 {
-        padding-left: 170px;
-        font-size: 135%;
+        padding-left: 5px;
+        font-size: 140%;
     }
 
     .menu {
-        width: 100%;
         justify-content: space-around;
         border-radius: 15px;
 
         nav {
             ul {
                 li {
-                    display: inline-block;
-                    padding: 8px 8px;
-
                     a {
-                        font-size: 95%;
-
-                        &:hover {
-                            font-size: 100%;
-                        }
+                        font-size: 120%;
                     }
                 }
             }
@@ -464,7 +494,7 @@ p {
         margin-bottom: 15px;
     }
 
-    h5 {
+    .text_ind {
         position: absolute;
         top: 850px;
         right: 10px;
@@ -477,7 +507,7 @@ p {
         flex-direction: column;
     }
 
-    p {
+    .descripcion {
         font-size: 100%;
     }
 
@@ -489,7 +519,7 @@ p {
     }
 
     .txtDefChord {
-        font-size: 100%;
+        padding: 5px;
     }
 
     .iconSize {
@@ -507,6 +537,11 @@ p {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.vid_chord {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media screen and (max-width:480px) {
@@ -532,8 +567,8 @@ p {
     }
 
     h3 {
-        padding-left: 80px;
-        font-size: 115%;
+        padding-left: 5px;
+        font-size: 125%;
     }
 
     .menu {
@@ -543,11 +578,7 @@ p {
                     padding: 2px 2px;
 
                     a {
-                        font-size: 55%;
-
-                        &:hover {
-                            font-size: 60%;
-                        }
+                        font-size: 100%;
                     }
                 }
             }
@@ -568,8 +599,8 @@ p {
         width: 30%;
     }
 
-    h5 {
-        top: 750px;
+    .text_ind {
+        top: 700px;
     }
 
     p {
@@ -583,17 +614,8 @@ p {
         }
     }
 
-    .txtDefChord {
-        font-size: 90%;
-    }
-
     .iconSize {
         height: 40px;
         width: 40px;
-    }
-
-    .vid_chord {
-        margin-left: auto;
-        margin-right: auto;
     }
 }

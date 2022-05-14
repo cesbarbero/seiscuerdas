@@ -30,22 +30,42 @@
         </div>
         <a class="col-lg-1 col-md-2 col-2" href="index.html"><img class="logo-img" src="./media/favicon-modified.png"
                 alt="ImagenLogo"></a>
-        <div class="col-lg-6 col-md-12 col-12 menu bkgcolor">
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="./pages/guitarras.html">GUITARRAS</a></li>
-                    <li><a href="./pages/acordes.html">ACORDES</a></li>
-                    <li><a href="./pages/experimenta.html">EXPERIMENTA</a></li>
-                    <li><a href="./pages/contacto.html">CONTACTO</a></li>
-                </ul>
+<!-- Menu responsive aplicando bootstrap -->
+        <div class="col-lg-6 menu bkgcolor">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light menu bkgcolor">
+                <div class="container-fluid bkgcolor radius">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bkgcolor" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/guitarras.html">GUITARRAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/acordes.html">ACORDES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/experimenta.html">EXPERIMENTA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
     <main class="row">
         <div class="col-lg-12 col-md-12 col-12 img-background">
-            <h5>
-                Comenzar a tocar la guitarra no es fácil, pero son tantas las satisfacciones que genera
+            <div class="text_ind">
+                "Comenzar a tocar la guitarra no es fácil, pero son tantas las satisfacciones que genera
                 tocar un
                 instrumento como éste, que simplemente recorrer el camino es satisfactorio, aunque haya por
                 medio
@@ -53,13 +73,13 @@
                 abandonar... Si te gusta, siempre vas a encontrar el tiempo para hacer sonar un acorde o
                 practicar
                 una canción. Espero que en este sitio encuentres la inspiración para iniciar y para
-                continuar...
-            </h5>
+                continuar..."
+            </div>
         </div>
     </main>
     <footer class="row bkgcolor">
         <div class="col-lg-8 col-md-12 col-12">
-            <p>SOBRE MI: Soy esposo, padre, y empleado. A los 36 años me di cuenta de que no quería llegar a
+            <p class="text_foot">SOBRE MI: Soy esposo, padre, y empleado. A los 36 años me di cuenta de que no quería llegar a
                 viejo
                 sin saber tocar la guitarra. Luego de 2 años y varios altibajos, es una idea firme que me
                 hace
@@ -68,11 +88,11 @@
         </div>
         <div class="col-lg-4 col-md-12 col-12 icons">
             <a href=https://open.spotify.com/playlist/2f7SCHWH9bgVk6xeINnErx?si=02801fd9607d4de6 target="_blank">
-                <img class="iconSize" src="./media/spotify.png" alt="Lista de Blues en Spotify"></a>
+                <img class="iconSize" src="./media/spotify.svg" alt="Lista de Blues en Spotify"></a>
             <a href=https://www.instagram.com/cesbarbero target="_blank"> <img class="iconSize"
-                    src="./media/instagram.png" alt="Perfil de Instagram"></a>
+                    src="./media/instagram.svg" alt="Perfil de Instagram"></a>
             <a href=https://www.facebook.com/cesar.barbero.7 target="_blank"> <img class="iconSize"
-                    src="./media/facebook.png" alt="Perfil de Facebook"></a>
+                    src="./media/facebook.svg" alt="Perfil de Facebook"></a>
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
