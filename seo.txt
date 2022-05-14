@@ -5,4 +5,4 @@ Por lo gral, los encabezados definen la estructura de los contenidos (en las pá
 Se extendió el título de cada página con un breve detalle luego de un guión.
 Se probó la página en la Prueba de optimización para móviles de Google.
     Por ej la página "Acordes" (la más completa), con resultado "optimizada", https://search.google.com/test/mobile-friendly/result?id=xt9OF-RVJnviIUYB02pzEA&hl=ES
-
+Se cambiaron los iconos de las redes sociales por archivos .svg
